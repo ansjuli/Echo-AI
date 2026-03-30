@@ -1,0 +1,91 @@
+{
+"settings": {
+  "home": {
+    "open": "start ms-settings:home"
+  },
+  "system": {
+    "display": {
+      "open": "start ms-settings:display",
+      "brightness": "core/adjust_brightness.ps1",
+      "night light on": "powershell -Command \"Enable-NightLight\"",
+      "night light off": "powershell -Command \"Disable-NightLight\""
+    },
+    "sound": {
+      "open": "start ms-settings:sound",
+      "volume up": "powershell -Command \"$ws = New-Object -ComObject WScript.Shell; $ws.SendKeys([char]175)\"",
+      "volume down": "powershell -Command \"$ws = New-Object -ComObject WScript.Shell; $ws.SendKeys([char]174)\"",
+      "mute": "powershell -Command \"$ws = New-Object -ComObject WScript.Shell; $ws.SendKeys([char]173)\""
+    },
+    "notifications": {
+      "open": "start ms-settings:notifications",
+      "focus assist": "start ms-settings:quiethours"
+    },
+    "power_sleep": {
+      "open": "start ms-settings:powersleep",
+      "sleep": "core/sleep_pc.ps1"
+    }
+  },
+  "bluetooth_devices": {
+    "open": "start ms-settings:bluetooth",
+    "toggle": "powershell toggle bluetooth script",
+    "pair device": "powershell pair bluetooth script"
+  },
+  "network_internet": {
+    "open": "start ms-settings:network",
+    "wifi on": "powershell -Command \"Enable-NetAdapter -Name Wi-Fi\"",
+    "wifi off": "powershell -Command \"Disable-NetAdapter -Name Wi-Fi\"",
+    "vpn": "start ms-settings:network-vpn"
+  },
+  "personalization": {
+    "open": "start ms-settings:personalization",
+    "themes": "start ms-settings:themes",
+    "lock screen": "start ms-settings:lockscreen",
+    "background": "start ms-settings:background",
+    "colors": "start ms-settings:colors"
+  },
+  "apps": {
+    "open": "start ms-settings:appsfeatures",
+    "default apps": "start ms-settings:defaultapps",
+    "optional features": "start ms-settings:optionalfeatures"
+  },
+  "accounts": {
+    "open": "start ms-settings:yourinfo",
+    "sign-in options": "start ms-settings:signinoptions",
+    "family & other users": "start ms-settings:otherusers",
+    "sync your settings": "start ms-settings:sync"
+  },
+  "time_language": {
+    "open": "start ms-settings:dateandtime",
+    "set date": "powershell core/set_date.ps1",
+    "set time": "powershell core/set_time.ps1",
+    "timezone": "start ms-settings:regionformat",
+    "language": "start ms-settings:regionlanguage"
+  },
+  "gaming": {
+    "open": "start ms-settings:gaming",
+    "xbox game bar": "start ms-settings:gaming-xboxgamebar",
+    "captures": "start ms-settings:gaming-captures",
+    "game mode": "start ms-settings:gaming-gamemode"
+  },
+  "accessibility": {
+    "open": "start ms-settings:easeofaccess",
+    "magnifier": "start ms-settings:easeofaccess-magnifier",
+    "high contrast": "start ms-settings:easeofaccess-highcontrast",
+    "narrator": "start ms-settings:easeofaccess-narrator"
+  },
+  "privacy_security": {
+    "open": "start ms-settings:privacy",
+    "location on": "powershell -Command \"Enable-Location\"",
+    "location off": "powershell -Command \"Disable-Location\"",
+    "camera": "start ms-settings:privacy-webcam",
+    "microphone": "start ms-settings:privacy-microphone",
+    "security": "start ms-settings:windowsdefender"
+  },
+  "windows_update": {
+    "open": "start ms-settings:windowsupdate",
+    "check updates": "powershell -Command \"UsoClient StartScan\"",
+    "update history": "start ms-settings:windowsupdate-history",
+    "advanced options": "start ms-settings:windowsupdate-advanced"
+  }
+ }
+}
